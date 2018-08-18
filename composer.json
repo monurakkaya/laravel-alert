@@ -1,0 +1,26 @@
+{
+    "name": "monurakkaya/laravel-alert",
+    "description": "Simple session alerts for Laravel",
+    "authors": [
+        {
+            "name": "monurakkaya",
+            "email": "monurakkaya@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Monurakkaya\\LaravelAlert\\" : "src/app/"
+        },
+        "files": [
+            "src/app/Support/helpers.php"
+        ]
+    },
+    "require": {},
+    "extra" : {
+        "laravel" : {
+            "providers" : [
+                "Monurakkaya\\LaravelAlert\\Providers\\ServiceProvider"
+            ]
+        }
+    }
+}
