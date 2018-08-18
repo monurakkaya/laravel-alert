@@ -5,9 +5,9 @@ if (!function_exists('success')) {
     function success($message, $title = null)
     {
         if ($title === null) {
-            $title = trans('laravel-alert.success.default_title');
+            $title = trans('laravel-alert::laravel-alert.success.default_title');
         }
-        alert($message, $title, 'success', 'bg-success-400');
+        alert($message, $title, 'success', config('laravel-alert.success_class', 'bg-success'));
     }
 }
 
@@ -15,9 +15,9 @@ if (!function_exists('error')) {
     function error($message, $title = null)
     {
         if ($title === null) {
-            $title = trans('laravel-alert.error.default_title');
+            $title = trans('laravel-alert::laravel-alert.error.default_title');
         }
-        alert($message, $title, 'error', 'bg-danger-400');
+        alert($message, $title, 'error', config('laravel-alert.error_class', 'bg-danger'));
     }
 }
 
@@ -36,21 +36,21 @@ if (!function_exists('alert')) {
 if (!function_exists('success_for_create')) {
     function success_for_create()
     {
-        success(trans('laravel-alert.success.create'));
+        success(trans('laravel-alert::laravel-alert.success.create'));
     }
 }
 
 if (!function_exists('success_for_update')) {
     function success_for_update()
     {
-        success(trans('laravel-alert.success.update'));
+        success(trans('laravel-alert::laravel-alert.success.update'));
     }
 }
 
 if (!function_exists('success_for_delete')) {
     function success_for_delete()
     {
-        success(trans('laravel-alert.success.delete'));
+        success(trans('laravel-alert::laravel-alert.success.delete'));
     }
 
 }

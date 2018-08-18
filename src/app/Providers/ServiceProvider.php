@@ -8,6 +8,7 @@
 
 namespace Monurakkaya\LaravelAlert\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 
 class ServiceProvider extends BaseProvider
@@ -16,5 +17,9 @@ class ServiceProvider extends BaseProvider
     {
         $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'laravel-alert');
         $this->loadViewsFrom(__DIR__.'/../../resources/views/laravel-alert', 'laravel-alert');
+        $this->publishes([
+           __DIR__.'/../../public' => public_path('laravel-alert/'),
+            __DIR__.'/../../config/laravel-alert.php' => config_path('laravel-alert.php')
+        ], 'laravel-alert');
     }
 }
