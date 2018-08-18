@@ -26,7 +26,7 @@ error($message, $title=NULL)
 You can override the default title by passing second argument to success or error functions
 
 ```
-error('Ops!', 'What are you doing!!!)
+error('What are you doing!!!', 'Ops!')
 ```
 
 ![Custom Error](http://monurakkaya.com/laravel-alert/error.png)
