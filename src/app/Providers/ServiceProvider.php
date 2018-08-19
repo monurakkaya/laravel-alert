@@ -8,7 +8,6 @@
 
 namespace Monurakkaya\LaravelAlert\Providers;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 
 class ServiceProvider extends BaseProvider
